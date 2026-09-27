@@ -113,6 +113,8 @@ public:
 	    WINDOW_MODE mode;
 	    /** Maximum FPS */
 	    int maximumFPS;
+	    /** Hardware decoder passed to libmpv */
+	    std::string hwdec;
 	    /** Indicates if pausing should happen when something goes fullscreen */
 	    bool pauseOnFullscreen;
 	    /** Indicates if pausing should happen while the system is running on battery power */
@@ -202,6 +204,7 @@ public:
         .render = {
             .mode = NORMAL_WINDOW,
             .maximumFPS = 30,
+            .hwdec = "auto",
             .pauseOnFullscreen = true,
             .pauseOnBattery = true,
             .pauseOnFullscreenOnlyWhenActive = false,
