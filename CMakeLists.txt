@@ -398,6 +398,8 @@ set(COMMON_SOURCES
 
     src/WallpaperEngine/Render/Drivers/Detectors/FullScreenDetector.cpp
     src/WallpaperEngine/Render/Drivers/Detectors/FullScreenDetector.h
+    src/WallpaperEngine/Render/Drivers/Detectors/BatteryDetector.cpp
+    src/WallpaperEngine/Render/Drivers/Detectors/BatteryDetector.h
 
     src/WallpaperEngine/Render/Drivers/Output/Output.cpp
     src/WallpaperEngine/Render/Drivers/Output/Output.h
