@@ -40,7 +40,7 @@ public:
     [[nodiscard]] void* getProcAddress (const char* name) const override;
 
 private:
-    ApplicationContext& m_context;
+    [[maybe_unused]] ApplicationContext& m_context;
     EmbeddedHost& m_host;
     Input::Drivers::EmbeddedMouseInput m_mouseInput;
     Output::Output* m_output = nullptr;
