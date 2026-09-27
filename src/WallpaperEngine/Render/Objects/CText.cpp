@@ -213,7 +213,7 @@ float CText::pixelsPerPoint () const {
     // rasterised at. Recovering that pixel size and dividing by the authored point
     // size yields the scene's pixels-per-point with no magic constant. Line height
     // scales linearly with pixel size, so a single reference measurement inverts it.
-    const float boxLineHeight = m_text.size.y - 2.0f * static_cast<float> (m_text.padding);
+    const float boxLineHeight = m_text.size.y - 2.0f * m_text.padding.y;
     const float pointSize = m_text.pointSize->value->getFloat ();
 
     if (m_ftFace != nullptr && boxLineHeight > 0.0f && pointSize > 0.0f) {
