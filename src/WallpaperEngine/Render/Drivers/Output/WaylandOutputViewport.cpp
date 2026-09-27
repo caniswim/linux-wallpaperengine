@@ -192,8 +192,11 @@ void WaylandOutputViewport::setupLS () {
 
     // Remove opaque region to avoid covering popup menus (e.g. in labwc)
     // The wallpaper should be transparent for compositor rendering above it.
-    // Only set empty input region to let mouse events pass through.
+    // The input region stays empty unless mouse interaction is enabled.
     wl_region* region = wl_compositor_create_region (m_driver->getWaylandContext ()->compositor);
+    if (m_driver->getApp ().getContext ().settings.mouse.enabled) {
+        wl_region_add (region, 0, 0, INT32_MAX, INT32_MAX);
+    }
     wl_surface_set_input_region (surface, region);
     wl_region_destroy (region);
 
