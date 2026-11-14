@@ -569,7 +569,8 @@ if(BUILD_TESTING)
         src/WallpaperEngine/Testing/Cases/PropertyParser.cpp
         src/WallpaperEngine/Testing/Cases/PulseAudioPlayingDetector.cpp
         src/WallpaperEngine/Testing/Cases/MediaSourceThrottle.cpp
-        src/WallpaperEngine/Testing/Cases/MediaSourceFallback.cpp)
+        src/WallpaperEngine/Testing/Cases/MediaSourceFallback.cpp
+        src/WallpaperEngine/Testing/Cases/TextPadding.cpp)
 endif()
 
 add_library(
